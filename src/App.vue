@@ -1,7 +1,23 @@
-<script setup></script>
-
 <template>
-  <div class="text-lg font-bold">Hallo Folks!</div>
+  <Navbar />
+  <Sidebar />
+  
+  <router-view/>
 </template>
 
-<style scoped></style>
+<script>
+import Navbar from './components/dashboard/Navbar.vue'
+import Sidebar from './components/dashboard/Sidebar.vue'
+
+export default {
+  components: {
+    Navbar,
+    Sidebar
+  },
+  watch: {
+    $route(to) {
+      document.title = to.meta.title || 'Homedevs';
+    }
+  }
+}
+</script>
