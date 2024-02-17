@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Home from './views/HomeView.vue';
-import About from './views/AboutView.vue';
+import Overview from './views/OverView.vue';
 
 const routes = [
   {
@@ -13,12 +13,12 @@ const routes = [
     }
   },
   {
-    path: '/about',
-    name: 'About',
-    component: About,
+    path: '/overview',
+    name: 'Overview',
+    component: Overview,
     meta: { 
-      title: 'About', 
-      description: 'About',
+      title: 'Overview', 
+      description: 'Overview',
     }
   },  
 ];
